@@ -1,0 +1,17 @@
+body {
+    max-height: 1000px;
+    max-width: 1600px;
+    min-width: 500px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+.header {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header__group {
+    display: flex;
+    justify-content: space-between;
+}
