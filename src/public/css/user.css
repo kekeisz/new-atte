@@ -1,0 +1,86 @@
+.menu__box {
+    display: flex;
+    align-items: center;
+}
+
+.menu:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.menu__home,
+.menu__attendance,
+.menu__user,
+.menu__logout {
+    text-decoration: none;
+    color: #000;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 90%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.title__txt {
+    font-size: 40px;
+}
+
+.table {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 20px;
+    border-spacing: 20px;
+}
+
+tr {
+    height: 50px;
+    text-align: left;
+}
+
+tr:not(:last-of-type) {
+    border-bottom: solid 2px #888;
+}
+
+tr:not(:first-of-type) {
+    font-size: 25px;
+}
+
+.table__header-id,
+.table__user-id {
+    width: 20%;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.table__user-name {
+    width: 20%;
+}
+
+.table__user-attendance {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.button__attendance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn__show-attendance {
+    height: 50px;
+    width: 50%;
+    font-size: 20px;
+    border: solid 2px #aaa;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #888;
+}
