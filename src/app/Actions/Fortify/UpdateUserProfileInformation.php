@@ -25,8 +25,9 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'string',
                 'email',
                 'max:255',
-                Rule::unique('users')->ignore($user->id),
+                Rule::unique('users')->ignore($user->id)
             ],
+            'password' => ['required', 'min:8', 'max:255']
         ])->validateWithBag('updateProfileInformation');
 
         if ($input['email'] !== $user->email &&

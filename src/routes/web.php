@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\RestController;
 use App\Http\Controllers\VerifyController;
-use App\Models\Rest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,11 +25,11 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/workin', [AttendanceController::class, 'startWork']);
     Route::get('/workout', [AttendanceController::class, 'endWork']);
     Route::get('/attendance', [AttendanceController::class, 'showAtte']);
-    Route::get('/attendance/{num}', [AttendanceController::class, 'showAtte']);
-    Route::get('/user', [AttendanceController::class, 'showUser']);
-    Route::get('/personal/{id}', [AttendanceController::class, 'showPersonal']);
+    Route::get('/attendance/{num}', [AttendanceController::class, 'showByDate']);
+    Route::get('/user', [PersonalController::class, 'showUser']);
+    Route::get('/personal/{id}', [PersonalController::class, 'showPersonal']);
 });
 Route::get('/email/verify', [VerifyController::class, 'sendEmail'])
     ->middleware('auth')->name('verification.notice');
-Route::get('email/verify/{id}/{hash}', [VerifyController::class, 'verify'])
+Route::get('/email/verify/{id}/{hash}', [VerifyController::class, 'verify'])
     ->middleware(['auth', 'signed'])->name('verification.verify');
