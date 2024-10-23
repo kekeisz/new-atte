@@ -31,5 +31,7 @@ Laravel8.x
 
 ###構築環境
 ・php:7.4.9-fpm
+</br>
 ・nginx:1.21.1
+</br>
 ・mysql:8.0.26
